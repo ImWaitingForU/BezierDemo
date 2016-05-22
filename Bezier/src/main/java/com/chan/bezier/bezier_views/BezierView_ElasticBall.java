@@ -11,21 +11,14 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 
-/**
- * 代码写的比较仓猝,以后再优化写法和补充那些数值的具体含义,求勿喷QAQ
- */
 public class BezierView_ElasticBall extends View {
 
 	private Path mPath;
 	private Paint mFillCirclePaint;
 
-	/** View的宽度 **/
 	private int width;
-	/** View的高度，这里View应该是正方形，所以宽高是一样的 **/
 	private int height;
-	/** View的中心坐标x **/
 	private int centerX;
-	/** View的中心坐标y **/
 	private int centerY;
 
 	private float maxLength;
@@ -227,8 +220,6 @@ public class BezierView_ElasticBall extends View {
 		MoveAnimation move = new MoveAnimation();
 		move.setDuration(1000);
 		move.setInterpolator(new AccelerateDecelerateInterpolator());
-		//move.setRepeatCount(Animation.INFINITE);
-		//move.setRepeatMode(Animation.REVERSE);
 		startAnimation(move);
 	}
 }
